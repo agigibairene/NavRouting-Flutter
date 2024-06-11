@@ -50,8 +50,9 @@ class HomePage extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.arrow_left),
                 color: Colors.white,
+                iconSize: 45.0,
                 onPressed: () {
-                  // Action for the left arrow button
+                  print("Hello");
                 },
               ),
               IconButton(
@@ -59,13 +60,14 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
                 onPressed: () {
                   // Action for the circle button
+                  print("Circle icon");
                 },
               ),
               IconButton(
                 icon: const Icon(Icons.square),
                 color: Colors.white,
                 onPressed: () {
-                  // Action for the square button
+                  print("Square");
                 },
               ),
             ],
@@ -135,14 +137,32 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     child: const Center(
-                      child: Text("Pixel",
-                          style: TextStyle(fontSize: size01)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Pixel 1", style: TextStyle(fontSize: size01)),
+                          SizedBox(height: 5),
+                          Text("Pixel 1 is the most featureful phone",
+                              style: TextStyle(fontSize: size01), textAlign: TextAlign.left),
+                          Text("Price: 800",
+                              style: TextStyle(fontSize: size01)),
+                          SizedBox(height: 5),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.star, color: Colors.orange),
+                              Icon(Icons.star, color: Colors.orange),
+                              Icon(Icons.star, color: Colors.orange),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
-          ), //Row 1/2
+          ),
 
           Expanded(
             child: Row(
@@ -201,17 +221,17 @@ class HomePage extends StatelessWidget {
                         children: [
                           Text("Laptop", style: TextStyle(fontSize: size01)),
                           SizedBox(height: 5),
-                          Text("Best performance",
-                              style: TextStyle(fontSize: size01)),
-                          Text("Highly recommended",
+                          Text("Laptop is the most productive",
+                              style: TextStyle(fontSize: 15.00), textAlign: TextAlign.left),
+                          Text("Price: 2000",
                               style: TextStyle(fontSize: size01)),
                           SizedBox(height: 5),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.star, color: Colors.yellow),
-                              Icon(Icons.star, color: Colors.yellow),
-                              Icon(Icons.star, color: Colors.yellow),
+                              Icon(Icons.star, color: Colors.orange),
+                              Icon(Icons.star, color: Colors.orange),
+                              Icon(Icons.star, color: Colors.orange),
                             ],
                           ),
                         ],
@@ -221,7 +241,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-          ), //Row 2/2
+          ),
 
           Expanded(
             child: Row(
@@ -280,17 +300,17 @@ class HomePage extends StatelessWidget {
                         children: [
                           Text("Tablet", style: TextStyle(fontSize: size01)),
                           SizedBox(height: 5),
-                          Text("Great display",
-                              style: TextStyle(fontSize: size01)),
-                          Text("Very portable",
+                          Text("Tablet is the most useful device",
+                              style: TextStyle(fontSize: size01), textAlign: TextAlign.left),
+                          Text("Price: 1500",
                               style: TextStyle(fontSize: size01)),
                           SizedBox(height: 5),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.star, color: Colors.yellow),
-                              Icon(Icons.star, color: Colors.yellow),
-                              Icon(Icons.star, color: Colors.yellow),
+                              Icon(Icons.star, color: Colors.orange),
+                              Icon(Icons.star, color: Colors.orange),
+                              Icon(Icons.star, color: Colors.orange),
                             ],
                           ),
                         ],
@@ -300,7 +320,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-          ), //Row 3/3
+          ),
 
           Expanded(
             child: Row(
@@ -359,17 +379,17 @@ class HomePage extends StatelessWidget {
                         children: [
                           Text("Pen drive", style: TextStyle(fontSize: size01)),
                           SizedBox(height: 5),
-                          Text("Fast transfer",
-                              style: TextStyle(fontSize: size01)),
-                          Text("High capacity",
+                          Text("iPhone is the stylish phone ever",
+                              style: TextStyle(fontSize: size01), textAlign: TextAlign.left),
+                          Text("Price: 100",
                               style: TextStyle(fontSize: size01)),
                           SizedBox(height: 5),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.star, color: Colors.yellow),
-                              Icon(Icons.star, color: Colors.yellow),
-                              Icon(Icons.star, color: Colors.yellow),
+                              Icon(Icons.star, color: Colors.orange),
+                              Icon(Icons.star, color: Colors.orange),
+                              Icon(Icons.star, color: Colors.orange),
                             ],
                           ),
                         ],
@@ -379,7 +399,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-          ), //Row 4/4
+          ), 
         ],
       ),
     );
@@ -399,6 +419,37 @@ class DetailPage extends StatelessWidget {
       ),
       body: Center(
         child: Text('Welcome to the $title page!'),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.black,
+        shape: const CircularNotchedRectangle(),
+        notchMargin: 6.0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.arrow_left),
+              color: Colors.white,
+              onPressed: () {
+                print("Left arrow");
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.circle),
+              color: Colors.white,
+              onPressed: () {
+                print("circle");
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.square),
+              color: Colors.white,
+              onPressed: () {
+                print("Square");
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
